@@ -52,6 +52,12 @@ Ensure the following are installed on your system:
 
 6. The application should be available at `http://localhost:3000`.
 
+##or with Docker (not fully functional explained in Features Not Implemented)
+  ```bash
+   docker-compose up
+   ```
+
+
 ### API Endpoints
 
 - **Create Application**: `POST /applications`
@@ -70,11 +76,9 @@ While the core functionality of the chat system is in place, several additional 
 
 ### 1. **Redis Caching**
 - **Planned**: Redis was intended to be used for caching frequently accessed data, such as chat and message counts, to improve performance and reduce the load on the MySQL database.
-- **Current Status**: Unfortunately, Redis was not implemented due to time constraints. Given more time, I would have added Redis to optimize data access and reduce the number of direct database queries.
 
 ### 2. **Queue System**
 - **Planned**: A queue system was planned to handle chat and message creation requests efficiently, especially in a concurrent environment. The **First-In-First-Out (FIFO)** technique would have been implemented to ensure that requests are processed in the exact order they are received, preventing race conditions.
-- **Current Status**: Due to the project deadline, the queue system was not implemented. In a future iteration, I would integrate a queue system using a tool like Sidekiq or RabbitMQ to handle background processing and ensure data consistency.
 
 ### 3. **Elasticsearch**
 - **Planned**: Elasticsearch was intended for searching messages with partial body matching. This would allow for efficient full-text search across messages.
@@ -82,7 +86,7 @@ While the core functionality of the chat system is in place, several additional 
 
 ### 4. **Docker Configuration**
 - **Planned**: A more robust Docker configuration was intended to streamline the development and deployment process, ensuring that all services are properly configured and isolated.
-- **Current Status**: While the application runs in Docker, the configuration lacks optimizations for production use. In a future iteration, I would enhance the Docker setup with multi-stage builds, health checks, and more comprehensive service definitions to improve maintainability and performance.
+- **Current Status**: After numerous attempts to set up Docker, I was unable to fully complete the configuration. I reached a certain point where the application runs, but I lack the knowledge to implement further improvements.
 
 ## Future Enhancements
 
