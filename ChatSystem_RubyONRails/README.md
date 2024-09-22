@@ -48,7 +48,7 @@ Ensure the following are installed on your system:
 
 6. The application should be available at `http://localhost:3000`.
 
-##or with Docker (not fully functional explained in Features Not Implemented)
+## or Docker (not fully functional explained in Features Not Implemented)
   ```bash
    docker-compose up
    ```
