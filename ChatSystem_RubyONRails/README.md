@@ -1,7 +1,3 @@
-Here’s the updated README with the Docker Compose part removed and the setup instructions for a regular Rails app:
-
----
-
 # Instabug Backend Challenge
 
 This project implements a chat system backend, as specified in the **Instabug Backend Challenge**. The system allows creating applications identified by a unique token, with chats and messages that are uniquely numbered per application and chat, respectively. Although several features were planned, some were not implemented due to the project deadline.
@@ -108,7 +104,3 @@ rails test
 While this project successfully implements the core functionality of the chat system, the features like Redis caching, the queuing system, Elasticsearch, and an enhanced Docker configuration were left out due to the time constraints of the challenge. Given more time, these features would have been included to enhance performance and search capabilities.
 
 For any questions, please refer to the emails provided in the challenge instructions.
-
----
-
-Let me know if you need any further changes!
