@@ -1,3 +1,7 @@
+Here’s the updated README with the Docker Compose part removed and the setup instructions for a regular Rails app:
+
+---
+
 # Instabug Backend Challenge
 
 This project implements a chat system backend, as specified in the **Instabug Backend Challenge**. The system allows creating applications identified by a unique token, with chats and messages that are uniquely numbered per application and chat, respectively. Although several features were planned, some were not implemented due to the project deadline.
@@ -13,27 +17,40 @@ This project implements a chat system backend, as specified in the **Instabug Ba
 
 - **Ruby on Rails**: Main backend framework.
 - **MySQL**: Used as the primary datastore for storing applications, chats, and messages.
-- **Docker**: The stack is containerized to simplify the setup and deployment process.
 
 ## Setup Instructions
 
 ### Prerequisites
 
 Ensure the following are installed on your system:
-- Docker
-- Docker Compose
+- Ruby
+- Rails
+- MySQL
 
 ### To Run the Application
 
 1. Clone this repository.
 2. Navigate to the project directory.
-3. Run the following command to build and start the containers:
+3. Install the required gems:
 
    ```bash
-   docker-compose up
+   bundle install
    ```
 
-4. The application should be available at `http://localhost:3000`.
+4. Set up the database:
+
+   ```bash
+   rails db:create
+   rails db:migrate
+   ```
+
+5. Start the Rails server:
+
+   ```bash
+   rails server
+   ```
+
+6. The application should be available at `http://localhost:3000`.
 
 ### API Endpoints
 
@@ -63,6 +80,10 @@ While the core functionality of the chat system is in place, several additional 
 - **Planned**: Elasticsearch was intended for searching messages with partial body matching. This would allow for efficient full-text search across messages.
 - **Current Status**: The integration of Elasticsearch was planned but was not completed due to the approaching deadline. This feature would be crucial for implementing the search functionality and would be added in a future version.
 
+### 4. **Docker Configuration**
+- **Planned**: A more robust Docker configuration was intended to streamline the development and deployment process, ensuring that all services are properly configured and isolated.
+- **Current Status**: While the application runs in Docker, the configuration lacks optimizations for production use. In a future iteration, I would enhance the Docker setup with multi-stage builds, health checks, and more comprehensive service definitions to improve maintainability and performance.
+
 ## Future Enhancements
 
 Given more time, I would implement the following:
@@ -80,10 +101,10 @@ rails test
 
 ## Conclusion
 
-While this project successfully implements the core functionality of the chat system, the features like Redis caching, the queuing system, and Elasticsearch were left out due to the time constraints of the challenge. Given more time, these features would have been included to enhance performance and search capabilities.
+While this project successfully implements the core functionality of the chat system, the features like Redis caching, the queuing system, Elasticsearch, and an enhanced Docker configuration were left out due to the time constraints of the challenge. Given more time, these features would have been included to enhance performance and search capabilities.
 
 For any questions, please refer to the emails provided in the challenge instructions.
 
 ---
 
-This README reflects the fact that Redis, the queue system, and Elasticsearch were planned but not implemented due to time constraints. It highlights the intended use of these technologies and their future integration.
+Let me know if you need any further changes!
